@@ -149,8 +149,8 @@ const mapAlertToNotification = (alert: Alert): NotificationItem => {
 const fetchAlerts = async () => {
   try {
     const res = await alertsService.listAlerts({ limit: 10 })
-    notifications.value = (res.data || []).map(mapAlertToNotification)
-    notifying.value = (res.count ?? notifications.value.length) > 0
+    notifications.value = (res.alerts || []).map(mapAlertToNotification)
+    notifying.value = (res.pagination?.total ?? res.count ?? notifications.value.length) > 0
   } catch {
     notifications.value = []
     notifying.value = false
