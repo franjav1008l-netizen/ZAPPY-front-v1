@@ -9,10 +9,19 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'Ecommerce',
+      name: 'Landing',
+      component: () => import('../pages/Landing.vue'),
+      meta: {
+        title: 'Zero-Click CRM',
+        requiresAuth: false,
+      },
+    },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
       component: () => import('../views/Ecommerce.vue'),
       meta: {
-        title: 'eCommerce Dashboard',
+        title: 'Dashboard',
         requiresAuth: true,
       },
     },
