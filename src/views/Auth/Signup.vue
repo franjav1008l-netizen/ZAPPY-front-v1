@@ -101,8 +101,14 @@
                   >
                 </div>
               </div>
-              <form @submit.prevent="handleSubmit">
+              <form @submit.prevent="handleSubmit" novalidate>
                 <div class="space-y-5">
+                  <div
+                    v-if="formError"
+                    class="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-500/40 dark:bg-red-500/10 dark:text-red-200"
+                  >
+                    {{ formError }}
+                  </div>
                   <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
                     <!-- First Name -->
                     <div class="sm:col-span-1">
@@ -264,13 +270,18 @@
                     </div>
                   </div>
                   <!-- Button -->
-                  <div>
+                  <div class="space-y-3">
                     <button
                       type="submit"
-                      class="flex items-center justify-center w-full px-4 py-3 text-sm font-medium text-white transition rounded-lg bg-brand-500 shadow-theme-xs hover:bg-brand-600"
+                      :disabled="isSubmitting || !agreeToTerms"
+                      class="flex items-center justify-center w-full px-4 py-3 text-sm font-medium text-white transition rounded-lg bg-brand-500 shadow-theme-xs hover:bg-brand-600 disabled:cursor-not-allowed disabled:opacity-70"
                     >
-                      Sign Up
+                      <span v-if="!isSubmitting">Sign Up</span>
+                      <span v-else>Creando cuenta…</span>
                     </button>
+                    <p v-if="!agreeToTerms" class="text-xs text-gray-400 dark:text-gray-500">
+                      Debes aceptar los términos para continuar.
+                    </p>
                   </div>
                 </div>
               </form>
@@ -312,8 +323,13 @@
 <script setup lang="ts">
 import FullScreenLayout from '@/components/layout/FullScreenLayout.vue'
 import CommonGridShape from '@/components/common/CommonGridShape.vue'
-import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import { computed, ref, watch } from 'vue'
+import { useRouter, useRoute, RouterLink } from 'vue-router'
+import { useAuth } from '@/composables/useAuth'
+
+const router = useRouter()
+const route = useRoute()
+const { signup, isLoading, errorMessage, clearError } = useAuth()
 
 const firstName = ref('')
 const lastName = ref('')
@@ -321,19 +337,55 @@ const email = ref('')
 const password = ref('')
 const showPassword = ref(false)
 const agreeToTerms = ref(false)
+const formError = ref<string | null>(null)
+
+const isSubmitting = computed(() => isLoading.value)
+
+watch(errorMessage, (value) => {
+  formError.value = value
+})
 
 const togglePasswordVisibility = () => {
   showPassword.value = !showPassword.value
 }
 
-const handleSubmit = () => {
-  // Implement form submission logic here
-  console.log('Form submitted', {
-    firstName: firstName.value,
-    lastName: lastName.value,
-    email: email.value,
-    password: password.value,
-    agreeToTerms: agreeToTerms.value,
-  })
+const handleSubmit = async () => {
+  clearError()
+  formError.value = null
+
+  if (!firstName.value.trim() || !lastName.value.trim()) {
+    formError.value = 'Completa tu nombre para crear la cuenta.'
+    return
+  }
+
+  if (!email.value.trim()) {
+    formError.value = 'Ingresa un correo electrónico válido.'
+    return
+  }
+
+  if (!password.value.trim()) {
+    formError.value = 'Selecciona una contraseña para continuar.'
+    return
+  }
+
+  if (!agreeToTerms.value) {
+    formError.value = 'Debes aceptar los términos para registrarte.'
+    return
+  }
+
+  try {
+    await signup({
+      firstName: firstName.value,
+      lastName: lastName.value,
+      email: email.value,
+      password: password.value,
+    })
+
+    const redirect = typeof route.query.redirect === 'string' ? route.query.redirect : '/'
+    router.push(redirect || '/')
+  } catch (error) {
+    formError.value =
+      error instanceof Error ? error.message : 'No fue posible crear la cuenta en este momento.'
+  }
 }
 </script>

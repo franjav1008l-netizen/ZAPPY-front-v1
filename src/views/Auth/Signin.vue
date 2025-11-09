@@ -101,14 +101,17 @@
                     >
                   </div>
                 </div>
-                <form @submit.prevent="handleSubmit">
+                <form @submit.prevent="handleSubmit" novalidate>
                   <div class="space-y-5">
+                    <div
+                      v-if="formError"
+                      class="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-500/40 dark:bg-red-500/10 dark:text-red-200"
+                    >
+                      {{ formError }}
+                    </div>
                     <!-- Email -->
                     <div>
-                      <label
-                        for="email"
-                        class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400"
-                      >
+                      <label for="email" class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">
                         Email<span class="text-error-500">*</span>
                       </label>
                       <input
@@ -122,12 +125,9 @@
                     </div>
                     <!-- Password -->
                     <div>
-                      <label
-                        for="password"
-                        class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400"
-                      >
-                        Password<span class="text-error-500">*</span>
-                      </label>
+                        <label for="password" class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">
+                          Password<span class="text-error-500">*</span>
+                        </label>
                       <div class="relative">
                         <input
                           v-model="password"
@@ -226,13 +226,18 @@
                       >
                     </div>
                     <!-- Button -->
-                    <div>
+                    <div class="space-y-3">
                       <button
                         type="submit"
-                        class="flex items-center justify-center w-full px-4 py-3 text-sm font-medium text-white transition rounded-lg bg-brand-500 shadow-theme-xs hover:bg-brand-600"
+                        :disabled="isSubmitting"
+                        class="flex items-center justify-center w-full px-4 py-3 text-sm font-medium text-white transition rounded-lg bg-brand-500 shadow-theme-xs hover:bg-brand-600 disabled:cursor-not-allowed disabled:opacity-70"
                       >
-                        Sign In
+                        <span v-if="!isSubmitting">Sign In</span>
+                        <span v-else>Ingresando…</span>
                       </button>
+                      <p v-if="keepLoggedIn" class="text-xs text-gray-400 dark:text-gray-500">
+                        Mantendremos tu sesión iniciada en este dispositivo.
+                      </p>
                     </div>
                   </div>
                 </form>
@@ -273,24 +278,51 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import CommonGridShape from '@/components/common/CommonGridShape.vue'
 import FullScreenLayout from '@/components/layout/FullScreenLayout.vue'
+import { useRouter, useRoute } from 'vue-router'
+import { useAuth } from '@/composables/useAuth'
+
+const router = useRouter()
+const route = useRoute()
+const { login, isLoading, errorMessage, clearError } = useAuth()
+
 const email = ref('')
 const password = ref('')
 const showPassword = ref(false)
 const keepLoggedIn = ref(false)
+const formError = ref<string | null>(null)
+
+const isSubmitting = computed(() => isLoading.value)
+
+watch(errorMessage, (value) => {
+  formError.value = value
+})
 
 const togglePasswordVisibility = () => {
   showPassword.value = !showPassword.value
 }
 
-const handleSubmit = () => {
-  // Handle form submission
-  console.log('Form submitted', {
-    email: email.value,
-    password: password.value,
-    keepLoggedIn: keepLoggedIn.value,
-  })
+const handleSubmit = async () => {
+  clearError()
+  formError.value = null
+
+  if (!email.value.trim() || !password.value.trim()) {
+    formError.value = 'Ingresa tus credenciales para continuar.'
+    return
+  }
+
+  try {
+    await login({
+      email: email.value,
+      password: password.value,
+    })
+
+    const redirect = typeof route.query.redirect === 'string' ? route.query.redirect : '/'
+    router.push(redirect || '/')
+  } catch (error) {
+    formError.value = error instanceof Error ? error.message : 'No se pudo iniciar sesión.'
+  }
 }
 </script>

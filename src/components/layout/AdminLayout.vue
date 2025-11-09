@@ -3,8 +3,8 @@
     <app-sidebar />
     <Backdrop />
     <div class="flex-1 transition-all duration-300 ease-in-out lg:ml-[240px]">
-      <div class="flex min-h-screen flex-col gap-4 lg:flex-row lg:gap-0 lg:items-start">
-        <ai-assistant-panel class="lg:ml-2" />
+      <div class="flex min-h-screen flex-col gap-4 lg:flex-row lg:gap-0 lg:items-stretch">
+        <ai-assistant-panel class="lg:ml-2 lg:h-[calc(100vh_-_2rem)]" />
         <div class="flex-1 flex flex-col">
           <app-header />
           <div class="flex-1 flex flex-col">

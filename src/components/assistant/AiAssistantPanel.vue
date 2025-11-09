@@ -9,7 +9,7 @@
   >
     <aside
       v-if="isOpen"
-      class="assistant-panel max-h-[calc(100vh_-_2rem)] flex-shrink-0 pl-4 pr-4 py-4 lg:pl-6 lg:w-[360px] lg:pr-0 lg:sticky lg:top-4"
+      class="assistant-panel max-h-[calc(100vh_-_2rem)] flex-shrink-0 pl-4 pr-4 py-4 lg:sticky lg:top-4 lg:h-[calc(100vh_-_2rem)] lg:pl-6 lg:w-[360px] lg:pr-0"
     >
       <div
         class="panel-container flex h-full flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white/95 shadow-theme-lg backdrop-blur-sm transition dark:border-white/10 dark:bg-white/[0.08]"
@@ -41,7 +41,7 @@
           </button>
         </header>
 
-        <section class="flex-1 overflow-y-auto px-5 py-4">
+        <section class="flex-1 min-h-0 overflow-y-auto px-5 py-4">
           <div class="space-y-4">
             <div v-for="message in messages" :key="message.id" class="flex" :class="message.role === 'assistant' ? 'justify-start' : 'justify-end'">
               <div
@@ -206,6 +206,8 @@ const handleSubmit = async () => {
 
 .assistant-panel > .panel-container {
   flex: 1;
+  min-height: 0;
+  height: 100%;
 }
 
 @media (min-width: 1024px) {
