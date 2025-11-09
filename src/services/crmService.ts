@@ -21,9 +21,14 @@ export type FreshDataItem = {
 export type FreshDataListResponse = {
   ok: boolean
   data: FreshDataItem[]
-  count: number
-  limit: number
-  offset: number
+  pagination?: {
+    limit: number
+    offset: number
+    total: number
+  }
+  count?: number
+  limit?: number
+  offset?: number
 }
 
 export type FreshDataQuery = {
@@ -97,15 +102,21 @@ export type Contact = {
 export type ContactsListResponse = {
   ok: boolean
   data: Contact[]
-  count: number
-  limit: number
-  offset: number
+  pagination?: {
+    limit: number
+    offset: number
+    total: number
+  }
+  count?: number
+  limit?: number
+  offset?: number
 }
 
 export type ContactsQuery = {
   companyId?: string
   search?: string
   sentiment?: Sentiment
+  type?: 'employee' | 'client' | 'supplier' | 'partner' | 'other'
   personKind?: 'employee' | 'client' | 'supplier' | 'partner' | 'other'
   isClient?: boolean
   updatedAfter?: string
@@ -129,23 +140,115 @@ export type WorkItem = {
 export type WorkItemsListResponse = {
   ok: boolean
   data: WorkItem[]
-  count: number
-  limit: number
-  offset: number
+  pagination?: {
+    limit: number
+    offset: number
+    total: number
+  }
+  count?: number
+  limit?: number
+  offset?: number
 }
 
 export type Interaction = {
   id: string
   channel: string
   occurred_at: string
+  budget?: number | null
+  requirements?: string[]
+  kpis?: string[]
+  company?: {
+    id: string
+    name: string
+  } | null
+  contact?: {
+    id: string
+    name: string
+    email?: string | null
+    role?: string | null
+  } | null
 }
 
 export type InteractionsListResponse = {
   ok: boolean
   data: Interaction[]
-  count: number
-  limit: number
-  offset: number
+  pagination?: {
+    limit: number
+    offset: number
+    total: number
+  }
+  count?: number
+  limit?: number
+  offset?: number
+}
+
+export type Company = {
+  id: string
+  name: string
+  industry?: string | null
+  website?: string | null
+  domain?: string | null
+}
+
+export type CompaniesListResponse = {
+  ok: boolean
+  data: Company[]
+  pagination?: {
+    limit: number
+    offset: number
+    total: number
+  }
+}
+
+export type CompaniesQuery = {
+  search?: string
+  industry?: string
+  limit?: number
+  offset?: number
+}
+
+export type CompanyOverview = {
+  ok: boolean
+  company: Company
+  contacts: Contact[]
+  interactions: Interaction[]
+  workItems: WorkItem[]
+  freshData: FreshDataItem[]
+  summary?: Record<string, unknown>
+}
+
+export type ContactOverview = {
+  ok: boolean
+  contact: Contact
+  interactions: Interaction[]
+  workItems: WorkItem[]
+  summary?: Record<string, unknown>
+}
+
+export type TimelineItem = {
+  id: string
+  type: 'interaction' | 'work_item' | 'fresh_data' | 'alert'
+  occurred_at: string
+  title: string
+  description?: string | null
+  metadata?: Record<string, unknown>
+}
+
+export type TimelineResponse = {
+  ok: boolean
+  data: TimelineItem[]
+  pagination?: {
+    limit: number
+    offset: number
+    total: number
+  }
+}
+
+export type TimelineQuery = {
+  companyId?: string
+  contactId?: string
+  limit?: number
+  offset?: number
 }
 
 export type WorkItemsQuery = {
@@ -194,7 +297,9 @@ const buildContactsQuery = (params: ContactsQuery = {}): QueryParams => {
   if (params.companyId) query.companyId = params.companyId
   if (params.search) query.search = params.search
   if (params.sentiment) query.sentiment = params.sentiment
-  if (params.personKind) query.personKind = params.personKind
+  // La documentación usa 'type', pero mantenemos compatibilidad con personKind
+  if (params.type) query.type = params.type
+  if (params.personKind) query.type = params.personKind
   if (typeof params.isClient === 'boolean') query.isClient = params.isClient
   if (params.updatedAfter) query.updatedAfter = params.updatedAfter
   if (params.updatedBefore) query.updatedBefore = params.updatedBefore
@@ -228,10 +333,32 @@ const buildInteractionsQuery = (params: InteractionsQuery = {}): QueryParams => 
   if (params.companyId) query.companyId = params.companyId
   if (params.channel) query.channel = params.channel
   if (params.search) query.search = params.search
-  if (params.startDate) query.startDate = params.startDate
-  if (params.endDate) query.endDate = params.endDate
+  if (params.startDate) query.from = params.startDate
+  if (params.endDate) query.to = params.endDate
   if (typeof params.minBudget === 'number') query.minBudget = params.minBudget
   if (typeof params.maxBudget === 'number') query.maxBudget = params.maxBudget
+  if (typeof params.limit === 'number') query.limit = params.limit
+  if (typeof params.offset === 'number') query.offset = params.offset
+
+  return query
+}
+
+const buildCompaniesQuery = (params: CompaniesQuery = {}): QueryParams => {
+  const query: QueryParams = {}
+
+  if (params.search) query.search = params.search
+  if (params.industry) query.industry = params.industry
+  if (typeof params.limit === 'number') query.limit = params.limit
+  if (typeof params.offset === 'number') query.offset = params.offset
+
+  return query
+}
+
+const buildTimelineQuery = (params: TimelineQuery = {}): QueryParams => {
+  const query: QueryParams = {}
+
+  if (params.companyId) query.companyId = params.companyId
+  if (params.contactId) query.contactId = params.contactId
   if (typeof params.limit === 'number') query.limit = params.limit
   if (typeof params.offset === 'number') query.offset = params.offset
 
@@ -258,11 +385,31 @@ const listInteractions = (params: InteractionsQuery = {}) =>
     query: buildInteractionsQuery(params),
   })
 
+const listCompanies = (params: CompaniesQuery = {}) =>
+  apiClient.get<CompaniesListResponse>('/api/crm/companies', {
+    query: buildCompaniesQuery(params),
+  })
+
+const getCompanyOverview = (id: string) =>
+  apiClient.get<CompanyOverview>(`/api/crm/companies/${id}/overview`)
+
+const getContactOverview = (id: string) =>
+  apiClient.get<ContactOverview>(`/api/crm/contacts/${id}/overview`)
+
+const getTimeline = (params: TimelineQuery = {}) =>
+  apiClient.get<TimelineResponse>('/api/crm/timeline', {
+    query: buildTimelineQuery(params),
+  })
+
 export const crmService = {
   listFreshData,
   listContacts,
   listWorkItems,
   listInteractions,
+  listCompanies,
+  getCompanyOverview,
+  getContactOverview,
+  getTimeline,
 }
 
 export type CrmService = typeof crmService

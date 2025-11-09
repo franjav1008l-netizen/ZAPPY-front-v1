@@ -3,7 +3,7 @@
 ---
 
 ## Convenciones globales
-- **Base URL**: `http://localhost:4000` (ajusta según despliegue).
+- **Base URL**: `https://api.payly.tech` (ajusta según despliegue).
 - **Formato de respuesta**: todos los endpoints devuelven al menos el campo `ok: boolean`. En operaciones exitosas suele añadirse `message` y datos específicos; en errores se incluye `error` o `details`.
 - **Códigos HTTP**: 2xx para éxito, 4xx cuando el cliente envía datos inválidos (ver `details` de Zod o mensajes específicos) y 5xx ante errores inesperados.
 - **Errores**: estructura estándar `{ ok: false, error: string, details?: any }`. Las validaciones basadas en Zod envían `details` como arreglo de `{ path, message }`.

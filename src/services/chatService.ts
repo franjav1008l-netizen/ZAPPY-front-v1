@@ -33,16 +33,23 @@ export interface SearchResult {
   updatedAt?: string
 }
 
+export interface ChatCitation {
+  source: string
+  excerpt: string
+}
+
 export interface ChatResponse {
   ok: boolean
   sessionId?: string
   answer?: string
   sources?: SearchResult[]
+  citations?: ChatCitation[]
+  actions?: ChatAction[]
   tools?: Record<string, unknown> | null
 }
 
 const chat = (body: ChatRequest) =>
-  apiClient.post<ChatResponse, ChatRequest>('/api/chat', { body })
+  apiClient.post<ChatResponse, ChatRequest>('/api/chat/', { body })
 
 export const chatService = {
   chat,
