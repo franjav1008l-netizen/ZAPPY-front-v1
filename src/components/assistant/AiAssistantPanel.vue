@@ -53,7 +53,12 @@
                 ]"
               >
                 <p class="font-medium" v-if="message.title">{{ message.title }}</p>
-                <p>{{ message.content }}</p>
+                <div 
+                  v-if="message.role === 'assistant'"
+                  class="message-content"
+                  v-html="parsedContent(message.content)"
+                ></div>
+                <p v-else>{{ message.content }}</p>
               </div>
             </div>
           </div>
@@ -149,6 +154,7 @@
 import { ref } from 'vue'
 import { useAiAssistant } from '@/composables/useAiAssistant'
 import { chatService } from '@/services/chatService'
+import { parseMessageContent } from '@/utils/messageParser'
 
 const { isOpen, close } = useAiAssistant()
 
@@ -157,6 +163,10 @@ const messages = ref<ChatMessage[]>([])
 const draft = ref('')
 const sessionId = ref<string | null>(null)
 const loading = ref<boolean>(false)
+
+const parsedContent = (content: string) => {
+  return parseMessageContent(content)
+}
 
 const handleSubmit = async () => {
   const text = draft.value.trim()
@@ -196,5 +206,48 @@ const handleSubmit = async () => {
   .assistant-panel {
     width: 360px;
   }
+}
+
+/* Estilos para el contenido parseado del mensaje */
+.message-content {
+  line-height: 1.6;
+}
+
+.message-content :deep(.message-paragraph) {
+  margin: 0.5rem 0;
+}
+
+.message-content :deep(.message-paragraph:first-child) {
+  margin-top: 0;
+}
+
+.message-content :deep(.message-paragraph:last-child) {
+  margin-bottom: 0;
+}
+
+.message-content :deep(.message-list) {
+  margin: 0.75rem 0;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+.message-content :deep(.message-list-item) {
+  margin: 0.375rem 0;
+  padding-left: 0.25rem;
+}
+
+.message-content :deep(strong) {
+  font-weight: 600;
+  color: inherit;
+}
+
+.message-content :deep(.message-company) {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.message-content :deep(.message-company:first-child) {
+  margin-top: 0;
 }
 </style>
