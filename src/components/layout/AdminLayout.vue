@@ -11,30 +11,6 @@
             <div class="p-4 mx-auto max-w-(--breakpoint-2xl) md:p-6 flex-1 w-full">
               <slot></slot>
             </div>
-            <!-- Footer -->
-            <footer class="p-4 mx-auto max-w-(--breakpoint-2xl) md:p-6 pt-0 w-full">
-              <p class="text-sm text-center text-gray-500 dark:text-gray-400">
-                Designed and Developed by 
-                <a 
-                  href="https://tailadmin.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="text-brand-500 hover:text-brand-600 transition-colors duration-200 font-medium"
-                >
-                  Zippy
-                </a>
-                ~ Distributed by 
-                <a 
-                  href="https://themewagon.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="text-brand-500 hover:text-brand-600 transition-colors duration-200 font-medium"
-                >
-                  ThemeWagon
-                </a>
-                .
-              </p>
-            </footer>
           </div>
         </div>
       </div>

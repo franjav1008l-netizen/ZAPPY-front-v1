@@ -4,20 +4,9 @@
       class="mx-auto flex w-full max-w-(--breakpoint-2xl) flex-col gap-4 rounded-3xl border border-gray-200 bg-white/90 p-4 shadow-theme-lg backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:border-white/10 dark:bg-gray-900/80"
     >
       <div class="flex w-full items-center gap-2 sm:gap-4">
-        <AiAssistantMini />
-        <HeaderLogo />
-
-        <SearchBar class="flex-1 min-w-0" />
-
-        <div class="hidden items-center gap-2 2xsm:gap-3 lg:flex">
-          <ThemeToggler />
-          <NotificationMenu />
-          <UserMenu />
-        </div>
-
         <button
           @click="toggleApplicationMenu"
-          class="flex h-10 w-10 items-center justify-center rounded-xl text-gray-700 transition hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 lg:hidden"
+          class="order-1 flex h-10 w-10 items-center justify-center rounded-xl text-gray-700 transition hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 lg:hidden"
         >
           <svg
             width="24"
@@ -34,6 +23,16 @@
             />
           </svg>
         </button>
+        <HeaderLogo class="order-2" />
+        <AiAssistantMini class="order-3 lg:order-2" />
+
+        <SearchBar class="order-4 flex-1 min-w-0" />
+
+        <div class="order-5 hidden items-center gap-2 2xsm:gap-3 lg:flex">
+          <ThemeToggler />
+          <NotificationMenu />
+          <UserMenu />
+        </div>
       </div>
 
       <div
