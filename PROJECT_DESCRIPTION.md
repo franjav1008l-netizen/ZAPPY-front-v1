@@ -214,3 +214,4 @@ Designed with Supabase backend, supporting enterprise-scale data management with
 
 **Summary**: Zero-Click CRM (Relay) transforms customer relationship management from a manual, reactive process into an automated, intelligent system that proactively surfaces insights and opportunities, enabling sales and CRM teams to focus on building relationships rather than managing data.
 
+

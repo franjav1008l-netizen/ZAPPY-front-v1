@@ -9,10 +9,10 @@
   >
     <aside
       v-if="isOpen"
-      class="assistant-panel flex-shrink-0 pl-4 pr-4 py-4 lg:pl-6 lg:w-[360px] lg:pr-0 lg:sticky lg:top-4"
+      class="assistant-panel max-h-[calc(100vh_-_2rem)] flex-shrink-0 pl-4 pr-4 py-4 lg:pl-6 lg:w-[360px] lg:pr-0 lg:sticky lg:top-4"
     >
       <div
-        class="flex h-full flex-col rounded-3xl border border-brand-100 bg-white/95 shadow-theme-lg backdrop-blur-sm transition dark:border-white/10 dark:bg-white/[0.08]"
+        class="panel-container flex h-full flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white/95 shadow-theme-lg backdrop-blur-sm transition dark:border-white/10 dark:bg-white/[0.08]"
       >
         <header
           class="flex items-start justify-between gap-3 rounded-t-3xl border-b border-brand-100 bg-brand-50/80 px-5 py-4 dark:border-brand-500/30 dark:bg-brand-500/15"
@@ -41,7 +41,7 @@
           </button>
         </header>
 
-        <section class="flex-1 px-5 py-4">
+        <section class="flex-1 overflow-y-auto px-5 py-4">
           <div class="space-y-4">
             <div v-for="message in messages" :key="message.id" class="flex" :class="message.role === 'assistant' ? 'justify-start' : 'justify-end'">
               <div
@@ -200,6 +200,12 @@ const handleSubmit = async () => {
 <style scoped>
 .assistant-panel {
   width: 100%;
+  max-height: calc(100vh - 2rem);
+  display: flex;
+}
+
+.assistant-panel > .panel-container {
+  flex: 1;
 }
 
 @media (min-width: 1024px) {
