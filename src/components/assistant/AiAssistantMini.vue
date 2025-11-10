@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { useAiAssistant } from '@/composables/useAiAssistant'
-import { ChatIcon } from '@/icons'
+import ChatIcon from '@/icons/ChatIcon.vue'
 
 const { isMinimized, open } = useAiAssistant()
 </script>

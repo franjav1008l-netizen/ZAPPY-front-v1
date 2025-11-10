@@ -48,7 +48,7 @@ import PageBreadcrumb from '@/components/common/PageBreadcrumb.vue'
 import AdminLayout from '@/components/layout/AdminLayout.vue'
 import ComponentCard from '@/components/common/ComponentCard.vue'
 import Button from '@/components/ui/Button.vue'
-import { BoxIcon } from '@/icons'
+import BoxIcon from '@/icons/BoxIcon.vue'
 const currentPageTitle = ref('Buttons')
 </script>
 

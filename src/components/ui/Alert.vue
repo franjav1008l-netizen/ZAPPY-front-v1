@@ -25,7 +25,10 @@
 </template>
 
 <script setup lang="ts">
-import { SuccessIcon, ErrorIcon, WarningIcon, InfoCircleIcon } from '@/icons'
+import SuccessIcon from '@/icons/SuccessIcon.vue'
+import ErrorIcon from '@/icons/ErrorIcon.vue'
+import WarningIcon from '@/icons/WarningIcon.vue'
+import InfoCircleIcon from '@/icons/InfoCircleIcon.vue'
 import { computed } from 'vue'
 
 interface AlertProps {

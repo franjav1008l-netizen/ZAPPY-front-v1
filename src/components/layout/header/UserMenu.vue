@@ -61,7 +61,11 @@
 </template>
 
 <script setup lang="ts">
-import { ChevronDownIcon, InfoCircleIcon, LogoutIcon, SettingsIcon, UserCircleIcon } from '@/icons'
+import ChevronDownIcon from '@/icons/ChevronDownIcon.vue'
+import InfoCircleIcon from '@/icons/InfoCircleIcon.vue'
+import LogoutIcon from '@/icons/LogoutIcon.vue'
+import SettingsIcon from '@/icons/SettingsIcon.vue'
+import UserCircleIcon from '@/icons/UserCircleIcon.vue'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuth } from '@/composables/useAuth'
