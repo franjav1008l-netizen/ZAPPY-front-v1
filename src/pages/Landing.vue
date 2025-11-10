@@ -11,16 +11,16 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
           <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 bg-[#3366FF] rounded-lg flex items-center justify-center">
+            <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center">
               <span class="text-xl font-bold text-white">Z</span>
             </div>
             <span class="text-2xl font-bold text-gray-900 dark:text-white">Zippy</span>
           </div>
           <div class="hidden md:flex items-center space-x-8">
-            <a href="#features" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-[#3366FF] transition-colors">Features</a>
-            <a href="#pricing" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-[#3366FF] transition-colors">Pricing</a>
-            <a href="#demo" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-[#3366FF] transition-colors">Demo</a>
-            <a href="#calculator" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-[#3366FF] transition-colors">ROI Calculator</a>
+            <a href="#features" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-500 transition-colors">Features</a>
+            <a href="#pricing" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-500 transition-colors">Pricing</a>
+            <a href="#demo" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-500 transition-colors">Demo</a>
+            <a href="#calculator" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-500 transition-colors">ROI Calculator</a>
             <router-link to="/signin" class="btn-primary-clean">
               Get Started
             </router-link>
@@ -33,16 +33,16 @@
     <section class="relative pt-24 pb-32 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="text-center relative z-10 max-w-4xl mx-auto">
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-950/50 rounded-full mb-8 border border-blue-100 dark:border-blue-900">
-            <div class="w-2 h-2 bg-[#3366FF] rounded-full"></div>
-            <span class="text-sm font-semibold text-[#3366FF]">AI-Powered Zero-Click CRM</span>
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-500/15 rounded-full mb-8 border border-brand-100 dark:border-brand-500/30">
+            <div class="w-2 h-2 bg-brand-500 rounded-full"></div>
+            <span class="text-sm font-semibold text-brand-600 dark:text-brand-400">AI-Powered Zero-Click CRM</span>
           </div>
           
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900 dark:text-white leading-tight">
+          <h1 class="fade-in-on-scroll mb-6 text-gray-900 dark:text-white">
             Drive growth with AI<br/>powered solutions
           </h1>
           
-          <p class="text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
+          <p class="text-body-lg fade-in-on-scroll text-gray-600 dark:text-gray-400 mb-10">
             Grow your business fast using our curated tools.
           </p>
           
@@ -62,7 +62,7 @@
               <div class="clean-card p-6 w-80 animate-float" style="animation-delay: 0s;">
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-[#3366FF] rounded-full flex items-center justify-center">
+                    <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center">
                       <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                       </svg>
@@ -117,7 +117,7 @@
                   </div>
                   <div class="flex items-center gap-2">
                     <div class="flex-1 h-2 bg-white/20 rounded-full">
-                      <div class="w-2/3 h-2 bg-[#3366FF] rounded-full"></div>
+                      <div class="w-2/3 h-2 bg-brand-500 rounded-full"></div>
                     </div>
                   </div>
                 </div>
@@ -165,20 +165,20 @@
     <section class="relative py-24 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center">
-            <div class="text-5xl font-bold text-[#3366FF] mb-3">90%+</div>
+          <div class="text-center stagger-item">
+            <div class="text-5xl font-bold text-brand-500 mb-3">90%+</div>
             <div class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Time Saved</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">Reduction in manual data entry</div>
+            <div class="text-small text-gray-600 dark:text-gray-400">Reduction in manual data entry</div>
           </div>
-          <div class="text-center">
-            <div class="text-5xl font-bold text-[#3366FF] mb-3">Real-time</div>
+          <div class="text-center stagger-item">
+            <div class="text-5xl font-bold text-brand-500 mb-3">Real-time</div>
             <div class="text-lg font-semibold text-gray-900 dark:text-white mb-2">AI Analysis</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">Instant insights powered by AI</div>
+            <div class="text-small text-gray-600 dark:text-gray-400">Instant insights powered by AI</div>
           </div>
-          <div class="text-center">
-            <div class="text-5xl font-bold text-[#3366FF] mb-3">360°</div>
+          <div class="text-center stagger-item">
+            <div class="text-5xl font-bold text-brand-500 mb-3">360°</div>
             <div class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Complete View</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">Unified customer insights</div>
+            <div class="text-small text-gray-600 dark:text-gray-400">Unified customer insights</div>
           </div>
         </div>
       </div>
@@ -187,124 +187,131 @@
     <!-- Problems Section -->
     <section id="features" class="relative py-24 px-4 sm:px-6 lg:px-8 bg-gray-50/50 dark:bg-gray-900/50">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 slide-up-on-scroll">
           <div class="inline-block px-4 py-2 bg-white dark:bg-gray-800 rounded-full mb-6 border border-gray-200 dark:border-gray-700">
-            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">The Challenge</span>
+            <span class="text-small font-semibold text-gray-700 dark:text-gray-300">The Challenge</span>
           </div>
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 class="text-gray-900 dark:text-white mb-4">
             Traditional CRMs Are<br/>
-            <span class="text-[#3366FF]">Holding You Back</span>
+            <span class="text-brand-500">Holding You Back</span>
           </h2>
-          <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p class="text-body-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Sales teams lose valuable time to manual processes
           </p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="clean-card p-8">
+          <div class="clean-card p-8 stagger-item">
             <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-6">
               <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Manual Data Entry</h3>
-            <p class="text-gray-600 dark:text-gray-400">Hours wasted on repetitive data entry that pulls teams away from selling</p>
+            <h3 class="text-gray-900 dark:text-white mb-3">Manual Data Entry</h3>
+            <p class="text-body text-gray-600 dark:text-gray-400">Hours wasted on repetitive data entry that pulls teams away from selling</p>
           </div>
           
-          <div class="clean-card p-8">
+          <div class="clean-card p-8 stagger-item">
             <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center mb-6">
               <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Fragmented Data</h3>
-            <p class="text-gray-600 dark:text-gray-400">Customer interactions scattered across platforms create incomplete views</p>
+            <h3 class="text-gray-900 dark:text-white mb-3">Fragmented Data</h3>
+            <p class="text-body text-gray-600 dark:text-gray-400">Customer interactions scattered across platforms create incomplete views</p>
           </div>
           
-          <div class="clean-card p-8">
+          <div class="clean-card p-8 stagger-item">
             <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/20 rounded-lg flex items-center justify-center mb-6">
               <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Delayed Insights</h3>
-            <p class="text-gray-600 dark:text-gray-400">By the time you see reports, opportunities have already passed</p>
+            <h3 class="text-gray-900 dark:text-white mb-3">Delayed Insights</h3>
+            <p class="text-body text-gray-600 dark:text-gray-400">By the time you see reports, opportunities have already passed</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Section - Bento Box Style -->
     <section class="relative py-24 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div class="text-center mb-16 slide-up-on-scroll">
+          <h2 class="text-gray-900 dark:text-white mb-4">
             Powerful Features
           </h2>
-          <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p class="text-body-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Everything you need to streamline your workflow
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="clean-card p-8">
-            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-[#3366FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Bento Box Grid - Layout asimétrico moderno -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Feature 1 - Span 2 columns -->
+          <div class="clean-card p-8 md:col-span-2 stagger-item">
+            <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/15 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Automatic Ingestion</h3>
-            <p class="text-gray-600 dark:text-gray-400">Automatically capture data from emails, calls, and meetings</p>
+            <h3 class="text-gray-900 dark:text-white mb-3">Automatic Ingestion</h3>
+            <p class="text-body text-gray-600 dark:text-gray-400">Automatically capture data from emails, calls, and meetings without manual input</p>
           </div>
 
-          <div class="clean-card p-8">
+          <!-- Feature 2 -->
+          <div class="clean-card p-8 stagger-item">
             <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center mb-6">
               <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">AI Insights</h3>
-            <p class="text-gray-600 dark:text-gray-400">Get intelligent recommendations and predictions</p>
+            <h3 class="text-gray-900 dark:text-white mb-3">AI Insights</h3>
+            <p class="text-body text-gray-600 dark:text-gray-400">Get intelligent recommendations and predictions</p>
           </div>
 
-          <div class="clean-card p-8">
+          <!-- Feature 3 -->
+          <div class="clean-card p-8 stagger-item">
             <div class="w-12 h-12 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center mb-6">
               <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Smart Automation</h3>
-            <p class="text-gray-600 dark:text-gray-400">Automate repetitive tasks and focus on what matters</p>
+            <h3 class="text-gray-900 dark:text-white mb-3">Smart Automation</h3>
+            <p class="text-body text-gray-600 dark:text-gray-400">Automate repetitive tasks and focus on what matters</p>
           </div>
 
-          <div class="clean-card p-8">
+          <!-- Feature 4 -->
+          <div class="clean-card p-8 stagger-item">
             <div class="w-12 h-12 bg-pink-100 dark:bg-pink-900/20 rounded-lg flex items-center justify-center mb-6">
               <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Real-time Analytics</h3>
-            <p class="text-gray-600 dark:text-gray-400">Track performance with live dashboards</p>
+            <h3 class="text-gray-900 dark:text-white mb-3">Real-time Analytics</h3>
+            <p class="text-body text-gray-600 dark:text-gray-400">Track performance with live dashboards</p>
           </div>
 
-          <div class="clean-card p-8">
+          <!-- Feature 5 - Span 2 columns -->
+          <div class="clean-card p-8 md:col-span-2 stagger-item">
             <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/20 rounded-lg flex items-center justify-center mb-6">
               <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Custom Workflows</h3>
-            <p class="text-gray-600 dark:text-gray-400">Build workflows that match your process</p>
+            <h3 class="text-gray-900 dark:text-white mb-3">Custom Workflows</h3>
+            <p class="text-body text-gray-600 dark:text-gray-400">Build workflows that match your process and automate your entire sales pipeline</p>
           </div>
 
-          <div class="clean-card p-8">
+          <!-- Feature 6 -->
+          <div class="clean-card p-8 stagger-item">
             <div class="w-12 h-12 bg-cyan-100 dark:bg-cyan-900/20 rounded-lg flex items-center justify-center mb-6">
               <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Team Collaboration</h3>
-            <p class="text-gray-600 dark:text-gray-400">Work together seamlessly in real-time</p>
+            <h3 class="text-gray-900 dark:text-white mb-3">Team Collaboration</h3>
+            <p class="text-body text-gray-600 dark:text-gray-400">Work together seamlessly in real-time</p>
           </div>
         </div>
       </div>
@@ -313,11 +320,11 @@
     <!-- Pricing Section -->
     <section id="pricing" class="relative py-24 px-4 sm:px-6 lg:px-8 bg-gray-50/50 dark:bg-gray-900/50">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div class="text-center mb-16 slide-up-on-scroll">
+          <h2 class="text-gray-900 dark:text-white mb-4">
             Simple, transparent pricing
           </h2>
-          <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p class="text-body-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Choose the plan that's right for you
           </p>
         </div>
@@ -356,9 +363,9 @@
           </div>
 
           <!-- Professional Plan -->
-          <div class="clean-card p-8 relative border-2 border-[#3366FF]">
+          <div class="clean-card p-8 relative border-2 border-brand-500">
             <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-              <span class="bg-[#3366FF] text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+              <span class="bg-brand-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
             </div>
             <div class="mb-6">
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Professional</h3>
@@ -449,11 +456,11 @@
     <!-- CTA Section -->
     <section class="relative py-24 px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
-        <div class="clean-card p-12 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+        <div class="clean-card p-12 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50 fade-in-on-scroll">
+          <h2 class="text-gray-900 dark:text-white mb-6">
             Ready to transform your workflow?
           </h2>
-          <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
+          <p class="text-body-lg text-gray-600 dark:text-gray-400 mb-8">
             Join thousands of teams already using Zippy
           </p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -474,7 +481,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
             <div class="flex items-center space-x-3 mb-4">
-              <div class="w-10 h-10 bg-[#3366FF] rounded-lg flex items-center justify-center">
+              <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center">
                 <span class="text-xl font-bold text-white">Z</span>
               </div>
               <span class="text-2xl font-bold">Zippy</span>
@@ -531,6 +538,18 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import AiChatDemo from '@/components/landing/AiChatDemo.vue';
 import ROICalculator from '@/components/landing/ROICalculator.vue';
+import { useScrollAnimation } from '@/composables/useScrollAnimation';
+
+// Inicializar animaciones de scroll
+const { initScrollAnimations } = useScrollAnimation();
+
+onMounted(() => {
+  // Pequeño delay para asegurar que el DOM esté renderizado
+  setTimeout(() => {
+    initScrollAnimations();
+  }, 200);
+});
 </script>
