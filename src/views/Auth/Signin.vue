@@ -284,6 +284,10 @@ import FullScreenLayout from '@/components/layout/FullScreenLayout.vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useAuth } from '@/composables/useAuth'
 
+defineOptions({
+  name: 'SigninPage'
+})
+
 const router = useRouter()
 const route = useRoute()
 const { login, isLoading, errorMessage, clearError } = useAuth()
