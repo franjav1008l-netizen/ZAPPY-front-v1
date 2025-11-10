@@ -10,6 +10,7 @@
           </div>
           <div class="hidden md:flex items-center space-x-8">
             <a href="#features" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition">Features</a>
+            <a href="#pricing" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition">Pricing</a>
             <a href="#benefits" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition">Benefits</a>
             <a href="#technology" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition">Technology</a>
             <router-link to="/signin" class="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition">
@@ -61,6 +62,54 @@
           <div class="text-center scroll-animate opacity-0 translate-y-10" style="transition-delay:200ms;">
             <div class="text-4xl font-bold text-primary mb-2">360°</div>
             <div class="text-gray-600 dark:text-gray-400">Customer view</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Logos Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 border-b border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12 scroll-animate opacity-0 translate-y-10">
+          <p class="text-sm font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wide">Trusted by Leading Companies</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center scroll-animate opacity-0 translate-y-10" style="transition-delay:100ms;">
+          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
+            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
+              <rect x="10" y="5" width="100" height="20" rx="4" class="text-gray-700 dark:text-gray-300"/>
+              <text x="60" y="20" font-size="14" font-weight="bold" text-anchor="middle" class="fill-white dark:fill-gray-900">TechCorp</text>
+            </svg>
+          </div>
+          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
+            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
+              <circle cx="20" cy="15" r="10" class="text-gray-700 dark:text-gray-300"/>
+              <text x="40" y="20" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">InnovateCo</text>
+            </svg>
+          </div>
+          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
+            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
+              <rect x="5" y="10" width="15" height="15" class="text-gray-700 dark:text-gray-300"/>
+              <text x="30" y="22" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">GrowthLabs</text>
+            </svg>
+          </div>
+          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
+            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
+              <path d="M15,5 L25,15 L15,25 Z" class="text-gray-700 dark:text-gray-300"/>
+              <text x="35" y="20" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">ScaleTech</text>
+            </svg>
+          </div>
+          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
+            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
+              <circle cx="15" cy="15" r="8" class="text-gray-700 dark:text-gray-300"/>
+              <circle cx="25" cy="15" r="8" class="text-gray-700 dark:text-gray-300" opacity="0.6"/>
+              <text x="40" y="20" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">DataFlow</text>
+            </svg>
+          </div>
+          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
+            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
+              <polygon points="15,5 25,10 20,20 10,20" class="text-gray-700 dark:text-gray-300"/>
+              <text x="35" y="20" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">CloudSync</text>
+            </svg>
           </div>
         </div>
       </div>
@@ -444,6 +493,164 @@
                 <div class="text-sm text-gray-600 dark:text-gray-400">Head of Sales, InnovateCo</div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 scroll-animate opacity-0 translate-y-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Simple, Transparent Pricing
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Choose the plan that fits your team's needs. All plans include core features.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Starter Plan -->
+          <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 scroll-animate opacity-0 translate-y-10 hover:border-primary transition">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Starter</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">Perfect for small teams getting started</p>
+            </div>
+            <div class="mb-6">
+              <span class="text-4xl font-bold text-gray-900 dark:text-white">$49</span>
+              <span class="text-gray-600 dark:text-gray-400">/user/month</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">Up to 5 users</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">Multi-channel ingestion</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">AI-powered analysis</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">Basic alerts</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">Email support</span>
+              </li>
+            </ul>
+            <router-link to="/signin" class="block w-full px-6 py-3 text-center font-semibold text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition">
+              Start Free Trial
+            </router-link>
+          </div>
+
+          <!-- Professional Plan (Featured) -->
+          <div class="bg-gradient-to-br from-primary to-indigo-600 rounded-2xl p-8 border-2 border-primary scroll-animate opacity-0 translate-y-10 relative shadow-xl transform scale-105">
+            <div class="absolute top-0 right-6 -translate-y-1/2">
+              <span class="inline-block px-4 py-1 bg-white text-primary text-xs font-bold rounded-full shadow-lg">MOST POPULAR</span>
+            </div>
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-white mb-2">Professional</h3>
+              <p class="text-white/90 text-sm">For growing teams that need more</p>
+            </div>
+            <div class="mb-6">
+              <span class="text-4xl font-bold text-white">$99</span>
+              <span class="text-white/80">/user/month</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-white">Up to 25 users</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-white">Everything in Starter</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-white">Advanced analytics</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-white">Custom integrations</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-white">Priority support</span>
+              </li>
+            </ul>
+            <router-link to="/signin" class="block w-full px-6 py-3 text-center font-semibold text-primary bg-white hover:bg-gray-50 rounded-lg transition shadow-lg">
+              Start Free Trial
+            </router-link>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 scroll-animate opacity-0 translate-y-10 hover:border-primary transition" style="transition-delay:100ms;">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Enterprise</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">For large organizations with custom needs</p>
+            </div>
+            <div class="mb-6">
+              <span class="text-4xl font-bold text-gray-900 dark:text-white">Custom</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">Unlimited users</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">Everything in Professional</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">Dedicated account manager</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">SLA & 24/7 support</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">Custom AI models</span>
+              </li>
+            </ul>
+            <a href="mailto:contact@zippy.app" class="block w-full px-6 py-3 text-center font-semibold text-white bg-primary hover:bg-primary/90 rounded-lg transition">
+              Contact Sales
+            </a>
           </div>
         </div>
       </div>
