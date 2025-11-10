@@ -1,20 +1,33 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-background to-gray-50 dark:from-gray-950 dark:to-black">
+  <div class="min-h-screen bg-white dark:bg-black overflow-hidden relative">
+    <!-- Animated Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute bottom-40 left-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+      <div class="absolute top-1/2 left-1/2 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl animate-float" style="animation-delay: 4s;"></div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800 z-50">
+    <nav class="fixed top-0 w-full glass z-50 border-b border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center space-x-2">
-            <div class="w-8 h-8 bg-gradient-to-br from-primary to-indigo-600 rounded-lg"></div>
-            <span class="text-xl font-bold text-gray-900 dark:text-white">Zippy</span>
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center space-x-3 group">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-xl blur-sm group-hover:blur-md transition-all"></div>
+              <div class="relative w-10 h-10 bg-black dark:bg-white rounded-xl flex items-center justify-center">
+                <span class="text-xl font-bold gradient-text">Z</span>
+              </div>
+            </div>
+            <span class="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">Zippy</span>
           </div>
           <div class="hidden md:flex items-center space-x-8">
-            <a href="#features" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition">Features</a>
-            <a href="#pricing" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition">Pricing</a>
-            <a href="#benefits" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition">Benefits</a>
-            <a href="#technology" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition">Technology</a>
-            <router-link to="/signin" class="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition">
-              Get Started
+            <a href="#features" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Features</a>
+            <a href="#pricing" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 transition-colors">Pricing</a>
+            <a href="#benefits" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors">Benefits</a>
+            <a href="#technology" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Technology</a>
+            <router-link to="/signin" class="relative group px-6 py-2.5 rounded-full overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 animate-gradient"></div>
+              <span class="relative text-sm font-bold text-white">Get Started →</span>
             </router-link>
           </div>
         </div>
@@ -22,207 +35,367 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center scroll-animate opacity-0 translate-y-10">
-          <div class="inline-flex items-center px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-full mb-6">
-            <span class="text-sm font-medium text-primary">AI-Powered CRM Platform</span>
+        <div class="text-center relative z-10">
+          <div class="inline-flex items-center gap-2 px-5 py-2 glass rounded-full mb-8 animate-slide-up border border-white/20">
+            <div class="w-2 h-2 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full animate-glow"></div>
+            <span class="text-sm font-bold bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">AI-Powered Zero-Click CRM</span>
           </div>
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-            Zero-Click CRM
-            <span class="block text-primary mt-2">That Works For You</span>
+          
+          <h1 class="text-6xl md:text-7xl lg:text-8xl font-black mb-8 animate-slide-up" style="animation-delay: 0.1s;">
+            <span class="block text-gray-900 dark:text-white mb-2">Zero-Click CRM</span>
+            <span class="block gradient-text">That Works For You</span>
           </h1>
-          <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10">
-            Eliminate manual data entry forever. Zippy automatically ingests, analyzes, and provides intelligent insights from all your customer interactions across email, Slack, WhatsApp, and more.
+          
+          <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto mb-12 leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+            Eliminate manual data entry forever. Zippy automatically <span class="font-bold text-gray-900 dark:text-white">ingests, analyzes, and delivers</span> intelligent insights from all your customer interactions.
           </p>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <router-link to="/signin" class="px-8 py-4 text-base font-semibold text-white bg-primary hover:bg-primary/90 rounded-lg shadow-lg hover:shadow-xl transition">
-              Start Free Trial
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-6 animate-slide-up" style="animation-delay: 0.3s;">
+            <router-link to="/signin" class="group relative px-10 py-5 rounded-2xl overflow-hidden hover-lift">
+              <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <span class="relative text-lg font-bold text-white flex items-center gap-2">
+                Start Free Trial
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </span>
             </router-link>
-            <a href="#features" class="px-8 py-4 text-base font-semibold text-gray-900 dark:text-white bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary rounded-lg transition">
-              Learn More
+            <a href="#features" class="px-10 py-5 text-lg font-bold text-gray-900 dark:text-white glass rounded-2xl hover-lift border border-white/20">
+              Explore Features
             </a>
+          </div>
+
+          <!-- Visual Elements -->
+          <div class="mt-20 relative animate-slide-up" style="animation-delay: 0.4s;">
+            <div class="relative mx-auto max-w-5xl">
+              <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 blur-3xl"></div>
+              <div class="relative glass rounded-3xl p-8 border border-white/20">
+                <div class="grid grid-cols-3 gap-4">
+                  <div class="glass rounded-2xl p-6 border border-cyan-500/30 hover-lift">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl mb-4 flex items-center justify-center">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                    </div>
+                    <p class="text-sm font-bold text-gray-900 dark:text-white">Instant Analysis</p>
+                  </div>
+                  <div class="glass rounded-2xl p-6 border border-purple-500/30 hover-lift" style="animation-delay: 0.1s;">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl mb-4 flex items-center justify-center">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </div>
+                    <p class="text-sm font-bold text-gray-900 dark:text-white">Zero Manual Work</p>
+                  </div>
+                  <div class="glass rounded-2xl p-6 border border-pink-500/30 hover-lift" style="animation-delay: 0.2s;">
+                    <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl mb-4 flex items-center justify-center">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                      </svg>
+                    </div>
+                    <p class="text-sm font-bold text-gray-900 dark:text-white">Smart Insights</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+    <section class="relative py-24 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center scroll-animate opacity-0 translate-y-10">
-            <div class="text-4xl font-bold text-primary mb-2">90%+</div>
-            <div class="text-gray-600 dark:text-gray-400">Reduction in data entry time</div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="relative group scroll-animate opacity-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+            <div class="relative glass rounded-3xl p-8 border border-cyan-500/20 hover-lift">
+              <div class="text-6xl font-black gradient-text mb-3">90%+</div>
+              <div class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Time Saved</div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">Reduction in manual data entry time</div>
+              <div class="absolute top-4 right-4 w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+            </div>
           </div>
-          <div class="text-center scroll-animate opacity-0 translate-y-10" style="transition-delay:100ms;">
-            <div class="text-4xl font-bold text-primary mb-2">Real-time</div>
-            <div class="text-gray-600 dark:text-gray-400">AI-powered analysis</div>
+          
+          <div class="relative group scroll-animate opacity-0" style="animation-delay:0.1s;">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-purple-600/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+            <div class="relative glass rounded-3xl p-8 border border-purple-500/20 hover-lift">
+              <div class="text-6xl font-black gradient-text mb-3">Real-time</div>
+              <div class="text-lg font-semibold text-gray-900 dark:text-white mb-2">AI Analysis</div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">Instant insights powered by AI</div>
+              <div class="absolute top-4 right-4 w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+            </div>
           </div>
-          <div class="text-center scroll-animate opacity-0 translate-y-10" style="transition-delay:200ms;">
-            <div class="text-4xl font-bold text-primary mb-2">360°</div>
-            <div class="text-gray-600 dark:text-gray-400">Customer view</div>
+          
+          <div class="relative group scroll-animate opacity-0" style="animation-delay:0.2s;">
+            <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-pink-600/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+            <div class="relative glass rounded-3xl p-8 border border-pink-500/20 hover-lift">
+              <div class="text-6xl font-black gradient-text mb-3">360°</div>
+              <div class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Complete View</div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">Unified customer insights</div>
+              <div class="absolute top-4 right-4 w-12 h-12 bg-pink-500/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Company Logos Section -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 border-b border-gray-200 dark:border-gray-800">
+    <section class="relative py-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-12 scroll-animate opacity-0 translate-y-10">
-          <p class="text-sm font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wide">Trusted by Leading Companies</p>
+        <div class="text-center mb-16 scroll-animate opacity-0">
+          <p class="text-sm font-bold text-gray-500 dark:text-gray-500 uppercase tracking-wider mb-2">Trusted By Industry Leaders</p>
+          <div class="h-px w-24 mx-auto bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center scroll-animate opacity-0 translate-y-10" style="transition-delay:100ms;">
-          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
-            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
-              <rect x="10" y="5" width="100" height="20" rx="4" class="text-gray-700 dark:text-gray-300"/>
-              <text x="60" y="20" font-size="14" font-weight="bold" text-anchor="middle" class="fill-white dark:fill-gray-900">TechCorp</text>
-            </svg>
+        <div class="flex flex-wrap items-center justify-center gap-12 scroll-animate opacity-0" style="animation-delay:0.1s;">
+          <div class="group relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all"></div>
+            <div class="relative glass rounded-2xl px-8 py-4 border border-white/10 hover-lift">
+              <svg class="h-10 w-auto opacity-60 group-hover:opacity-100 transition-opacity" viewBox="0 0 120 30" fill="currentColor">
+                <rect x="10" y="5" width="100" height="20" rx="4" class="text-gray-700 dark:text-gray-300"/>
+                <text x="60" y="20" font-size="14" font-weight="bold" text-anchor="middle" class="fill-white dark:fill-gray-900">TechCorp</text>
+              </svg>
+            </div>
           </div>
-          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
-            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
-              <circle cx="20" cy="15" r="10" class="text-gray-700 dark:text-gray-300"/>
-              <text x="40" y="20" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">InnovateCo</text>
-            </svg>
+          <div class="group relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all"></div>
+            <div class="relative glass rounded-2xl px-8 py-4 border border-white/10 hover-lift">
+              <svg class="h-10 w-auto opacity-60 group-hover:opacity-100 transition-opacity" viewBox="0 0 120 30" fill="currentColor">
+                <circle cx="20" cy="15" r="10" class="text-gray-700 dark:text-gray-300"/>
+                <text x="40" y="20" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">InnovateCo</text>
+              </svg>
+            </div>
           </div>
-          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
-            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
-              <rect x="5" y="10" width="15" height="15" class="text-gray-700 dark:text-gray-300"/>
-              <text x="30" y="22" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">GrowthLabs</text>
-            </svg>
+          <div class="group relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all"></div>
+            <div class="relative glass rounded-2xl px-8 py-4 border border-white/10 hover-lift">
+              <svg class="h-10 w-auto opacity-60 group-hover:opacity-100 transition-opacity" viewBox="0 0 120 30" fill="currentColor">
+                <rect x="5" y="10" width="15" height="15" class="text-gray-700 dark:text-gray-300"/>
+                <text x="30" y="22" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">GrowthLabs</text>
+              </svg>
+            </div>
           </div>
-          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
-            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
-              <path d="M15,5 L25,15 L15,25 Z" class="text-gray-700 dark:text-gray-300"/>
-              <text x="35" y="20" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">ScaleTech</text>
-            </svg>
-          </div>
-          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
-            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
-              <circle cx="15" cy="15" r="8" class="text-gray-700 dark:text-gray-300"/>
-              <circle cx="25" cy="15" r="8" class="text-gray-700 dark:text-gray-300" opacity="0.6"/>
-              <text x="40" y="20" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">DataFlow</text>
-            </svg>
-          </div>
-          <div class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition">
-            <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
-              <polygon points="15,5 25,10 20,20 10,20" class="text-gray-700 dark:text-gray-300"/>
-              <text x="35" y="20" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">CloudSync</text>
-            </svg>
+          <div class="group relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all"></div>
+            <div class="relative glass rounded-2xl px-8 py-4 border border-white/10 hover-lift">
+              <svg class="h-10 w-auto opacity-60 group-hover:opacity-100 transition-opacity" viewBox="0 0 120 30" fill="currentColor">
+                <path d="M15,5 L25,15 L15,25 Z" class="text-gray-700 dark:text-gray-300"/>
+                <text x="35" y="20" font-size="14" font-weight="bold" class="fill-gray-700 dark:fill-gray-300">ScaleTech</text>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Problem Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8">
+    <section class="relative py-24 px-4 sm:px-6 lg:px-8 bg-gray-50/50 dark:bg-gray-950/50">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16 scroll-animate opacity-0 translate-y-10">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            The Problem with Traditional CRMs
+        <div class="text-center mb-20 scroll-animate opacity-0">
+          <div class="inline-block px-4 py-2 glass rounded-full mb-6 border border-white/10">
+            <span class="text-sm font-bold text-gray-700 dark:text-gray-300">The Challenge</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6">
+            Traditional CRMs Are
+            <span class="block gradient-text mt-2">Holding You Back</span>
           </h2>
-          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Sales teams waste countless hours on manual data entry and struggle to maintain complete customer context
+          <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Sales teams lose valuable time to manual processes while critical insights slip through the cracks
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 scroll-animate opacity-0 translate-y-10">
-            <div class="w-12 h-12 bg-red-100 dark:bg-red-950 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="group relative scroll-animate opacity-0">
+            <div class="absolute inset-0 bg-red-500/5 dark:bg-red-500/10 rounded-3xl"></div>
+            <div class="relative glass rounded-3xl p-8 border border-red-500/20 hover-lift">
+              <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Manual Data Entry</h3>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Hours wasted on repetitive data entry that pulls teams away from selling</p>
+              <div class="mt-6 flex items-center text-sm font-semibold text-red-600 dark:text-red-400">
+                <span>Critical time drain</span>
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
             </div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Manual Data Entry</h3>
-            <p class="text-gray-600 dark:text-gray-400">Time-consuming and error-prone manual updates reduce productivity</p>
           </div>
-          <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 scroll-animate opacity-0 translate-y-10" style="transition-delay:100ms;">
-            <div class="w-12 h-12 bg-red-100 dark:bg-red-950 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
+          
+          <div class="group relative scroll-animate opacity-0" style="animation-delay:0.1s;">
+            <div class="absolute inset-0 bg-red-500/5 dark:bg-red-500/10 rounded-3xl"></div>
+            <div class="relative glass rounded-3xl p-8 border border-red-500/20 hover-lift">
+              <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Fragmented Data</h3>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Customer interactions scattered across platforms create incomplete views</p>
+              <div class="mt-6 flex items-center text-sm font-semibold text-orange-600 dark:text-orange-400">
+                <span>Insight gaps</span>
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
             </div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Fragmented Data</h3>
-            <p class="text-gray-600 dark:text-gray-400">Interactions scattered across email, Slack, calls, and more</p>
           </div>
-          <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 scroll-animate opacity-0 translate-y-10" style="transition-delay:200ms;">
-            <div class="w-12 h-12 bg-red-100 dark:bg-red-950 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
+          
+          <div class="group relative scroll-animate opacity-0" style="animation-delay:0.2s;">
+            <div class="absolute inset-0 bg-red-500/5 dark:bg-red-500/10 rounded-3xl"></div>
+            <div class="relative glass rounded-3xl p-8 border border-red-500/20 hover-lift">
+              <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Missed Opportunities</h3>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Critical signals buried in noise lead to lost deals and revenue</p>
+              <div class="mt-6 flex items-center text-sm font-semibold text-pink-600 dark:text-pink-400">
+                <span>Revenue at risk</span>
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
             </div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Missed Opportunities</h3>
-            <p class="text-gray-600 dark:text-gray-400">Critical signals and opportunities lost in the noise</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+    <section id="features" class="relative py-28 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16 scroll-animate opacity-0 translate-y-10">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Intelligent Features That Work Automatically
+        <div class="text-center mb-20 scroll-animate opacity-0">
+          <div class="inline-block px-4 py-2 glass rounded-full mb-6 border border-white/10">
+            <span class="text-sm font-bold gradient-text">Intelligent Automation</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6">
+            Features That Work
+            <span class="block gradient-text mt-2">While You Focus on Selling</span>
           </h2>
-          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Zippy uses advanced AI to automate your entire customer interaction lifecycle
+          <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Advanced AI automates your entire customer interaction lifecycle
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="group p-8 bg-gradient-to-br from-primary/5 to-indigo-500/5 dark:from-primary/10 dark:to-indigo-500/10 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-primary dark:hover:border-primary transition scroll-animate opacity-0 translate-y-10">
-            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-              </svg>
+        
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Feature 1 - Large -->
+          <div class="lg:col-span-2 lg:row-span-2 group relative scroll-animate opacity-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+            <div class="relative glass rounded-3xl p-10 border border-cyan-500/20 hover-lift h-full flex flex-col">
+              <div class="flex items-start justify-between mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                  </svg>
+                </div>
+                <div class="flex gap-2">
+                  <div class="w-2 h-2 bg-cyan-500 rounded-full animate-glow"></div>
+                  <span class="text-xs font-bold text-cyan-600 dark:text-cyan-400">Active</span>
+                </div>
+              </div>
+              <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">Multi-Channel Ingestion</h3>
+              <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 flex-grow">Automatically captures and processes interactions from email, Slack, WhatsApp, video calls, and audio recordings in real-time</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs font-bold bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 rounded-full">Email</span>
+                <span class="px-3 py-1 text-xs font-bold bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 rounded-full">Slack</span>
+                <span class="px-3 py-1 text-xs font-bold bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 rounded-full">WhatsApp</span>
+                <span class="px-3 py-1 text-xs font-bold bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 rounded-full">Video</span>
+                <span class="px-3 py-1 text-xs font-bold bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 rounded-full">Audio</span>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Multi-Channel Ingestion</h3>
-            <p class="text-gray-600 dark:text-gray-400">Automatically captures interactions from email, Slack, WhatsApp, video, and audio</p>
           </div>
-          <div class="group p-8 bg-gradient-to-br from-primary/5 to-indigo-500/5 dark:from-primary/10 dark:to-indigo-500/10 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-primary dark:hover:border-primary transition scroll-animate opacity-0 translate-y-10" style="transition-delay:100ms;">
-            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-              </svg>
+          
+          <!-- Feature 2 -->
+          <div class="group relative scroll-animate opacity-0" style="animation-delay:0.1s;">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-purple-600/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+            <div class="relative glass rounded-3xl p-8 border border-purple-500/20 hover-lift h-full">
+              <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 dark:text-white mb-3">AI Analysis</h3>
+              <p class="text-gray-600 dark:text-gray-400">Extracts requirements, sentiment, budgets, and KPIs automatically</p>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">AI-Powered Analysis</h3>
-            <p class="text-gray-600 dark:text-gray-400">Google Gemini AI extracts requirements, sentiment, budgets, and KPIs automatically</p>
           </div>
-          <div class="group p-8 bg-gradient-to-br from-primary/5 to-indigo-500/5 dark:from-primary/10 dark:to-indigo-500/10 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-primary dark:hover:border-primary transition scroll-animate opacity-0 translate-y-10" style="transition-delay:200ms;">
-            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-              </svg>
+          
+          <!-- Feature 3 -->
+          <div class="group relative scroll-animate opacity-0" style="animation-delay:0.15s;">
+            <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-pink-600/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+            <div class="relative glass rounded-3xl p-8 border border-pink-500/20 hover-lift h-full">
+              <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 dark:text-white mb-3">Smart Chat</h3>
+              <p class="text-gray-600 dark:text-gray-400">Ask questions in natural language, get contextual answers with citations</p>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Intelligent Chat Assistant</h3>
-            <p class="text-gray-600 dark:text-gray-400">Ask questions in natural language and get contextual, cited answers</p>
           </div>
-          <div class="group p-8 bg-gradient-to-br from-primary/5 to-indigo-500/5 dark:from-primary/10 dark:to-indigo-500/10 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-primary dark:hover:border-primary transition scroll-animate opacity-0 translate-y-10">
-            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
-              </svg>
+          
+          <!-- Feature 4 -->
+          <div class="group relative scroll-animate opacity-0" style="animation-delay:0.2s;">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+            <div class="relative glass rounded-3xl p-8 border border-cyan-500/20 hover-lift h-full">
+              <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 dark:text-white mb-3">Proactive Alerts</h3>
+              <p class="text-gray-600 dark:text-gray-400">Automatic notifications for urgent issues and opportunities</p>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Proactive Alerts</h3>
-            <p class="text-gray-600 dark:text-gray-400">Automatic alerts for urgent issues, sentiment changes, and opportunities</p>
           </div>
-          <div class="group p-8 bg-gradient-to-br from-primary/5 to-indigo-500/5 dark:from-primary/10 dark:to-indigo-500/10 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-primary dark:hover:border-primary transition scroll-animate opacity-0 translate-y-10" style="transition-delay:100ms;">
-            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
+          
+          <!-- Feature 5 -->
+          <div class="lg:col-span-2 group relative scroll-animate opacity-0" style="animation-delay:0.25s;">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+            <div class="relative glass rounded-3xl p-8 border border-purple-500/20 hover-lift h-full flex items-center gap-8">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+              <div class="flex-grow">
+                <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-3">Semantic Search</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-400">Find anything using natural language queries, not just keywords. Our AI understands context and intent.</p>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Semantic Search</h3>
-            <p class="text-gray-600 dark:text-gray-400">Find information using natural language, not just keywords</p>
           </div>
-          <div class="group p-8 bg-gradient-to-br from-primary/5 to-indigo-500/5 dark:from-primary/10 dark:to-indigo-500/10 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-primary dark:hover:border-primary transition scroll-animate opacity-0 translate-y-10" style="transition-delay:200ms;">
-            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-              </svg>
+          
+          <!-- Feature 6 -->
+          <div class="group relative scroll-animate opacity-0" style="animation-delay:0.3s;">
+            <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-pink-600/5 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+            <div class="relative glass rounded-3xl p-8 border border-pink-500/20 hover-lift h-full">
+              <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 dark:text-white mb-3">Insights & Analytics</h3>
+              <p class="text-gray-600 dark:text-gray-400">Trend analysis, sentiment tracking, and actionable intelligence</p>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Insights & Analytics</h3>
-            <p class="text-gray-600 dark:text-gray-400">Trend analysis, sentiment tracking, and actionable insights</p>
           </div>
         </div>
       </div>
@@ -696,22 +869,36 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
-      <div class="max-w-4xl mx-auto">
-        <div class="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-indigo-600 rounded-3xl p-12 text-center scroll-animate opacity-0 translate-y-10">
-          <div class="absolute inset-0 bg-black/10 dark:bg-white/5"></div>
-          <div class="relative">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+    <section class="relative py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+      <div class="max-w-5xl mx-auto relative z-10">
+        <div class="relative overflow-hidden rounded-3xl">
+          <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 animate-gradient"></div>
+          <div class="relative glass border border-white/20 p-16 text-center">
+            <div class="mb-8 flex justify-center">
+              <div class="inline-flex items-center gap-2 px-5 py-2 glass rounded-full border border-white/30">
+                <div class="w-2 h-2 bg-white rounded-full animate-glow"></div>
+                <span class="text-sm font-bold text-white">Start Your Free Trial Today</span>
+              </div>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-6">
               Ready to Transform Your CRM?
             </h2>
-            <p class="text-xl text-white/90 mb-8">
-              Join forward-thinking teams using AI to automate customer relationship management
+            <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Join forward-thinking teams using AI to automate customer relationship management and focus on what matters most—selling.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <router-link to="/signin" class="px-8 py-4 text-base font-semibold text-primary bg-white hover:bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105">
-                Start Free Trial
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <router-link to="/signin" class="group relative px-10 py-5 rounded-2xl overflow-hidden hover-lift">
+                <div class="absolute inset-0 bg-white"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="relative text-lg font-black bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 bg-clip-text text-transparent flex items-center gap-2">
+                  Start Free Trial
+                  <svg class="w-5 h-5 text-purple-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                  </svg>
+                </span>
               </router-link>
-              <a href="mailto:contact@zippy.app" class="px-8 py-4 text-base font-semibold text-white border-2 border-white hover:bg-white/10 rounded-lg transition-all hover:scale-105">
+              <a href="mailto:contact@zippy.app" class="px-10 py-5 text-lg font-bold text-white glass rounded-2xl hover-lift border border-white/30">
                 Contact Sales
               </a>
             </div>
@@ -721,45 +908,70 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
+    <footer class="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
-            <div class="flex items-center space-x-2 mb-4">
-              <div class="w-8 h-8 bg-gradient-to-br from-primary to-indigo-600 rounded-lg"></div>
-              <span class="text-xl font-bold text-gray-900 dark:text-white">Zippy</span>
+            <div class="flex items-center gap-3 mb-6 group">
+              <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-xl blur-sm group-hover:blur-md transition-all"></div>
+                <div class="relative w-10 h-10 bg-black dark:bg-white rounded-xl flex items-center justify-center">
+                  <span class="text-lg font-bold gradient-text">Z</span>
+                </div>
+              </div>
+              <span class="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">Zippy</span>
             </div>
-            <p class="text-gray-600 dark:text-gray-400 text-sm">Zero-Click CRM powered by AI</p>
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">Zero-Click CRM powered by AI. Transform how you manage customer relationships.</p>
+            <div class="flex gap-4">
+              <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center border border-white/10 hover-lift group">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-cyan-500 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center border border-white/10 hover-lift group">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-purple-500 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+              <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center border border-white/10 hover-lift group">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-pink-500 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                </svg>
+              </a>
+            </div>
           </div>
           <div>
-            <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Product</h4>
-            <ul class="space-y-2 text-sm">
-              <li><a href="#features" class="text-gray-600 dark:text-gray-400 hover:text-primary transition">Features</a></li>
-              <li><a href="#benefits" class="text-gray-600 dark:text-gray-400 hover:text-primary transition">Benefits</a></li>
-              <li><a href="#technology" class="text-gray-600 dark:text-gray-400 hover:text-primary transition">Technology</a></li>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-6">Product</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#features" class="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Features</a></li>
+              <li><a href="#pricing" class="text-gray-600 dark:text-gray-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors">Pricing</a></li>
+              <li><a href="#benefits" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 dark:hover:text-pink-400 transition-colors">Benefits</a></li>
+              <li><a href="#technology" class="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Technology</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Company</h4>
-            <ul class="space-y-2 text-sm">
-              <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition">About</a></li>
-              <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition">Careers</a></li>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-6">Company</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors">About</a></li>
+              <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 dark:hover:text-pink-400 transition-colors">Careers</a></li>
+              <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Blog</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Resources</h4>
-            <ul class="space-y-2 text-sm">
-              <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition">Docs</a></li>
-              <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition">API</a></li>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-6">Resources</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors">Documentation</a></li>
+              <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 dark:hover:text-pink-400 transition-colors">API Reference</a></li>
+              <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Help Center</a></li>
             </ul>
           </div>
         </div>
-        <div class="pt-6 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p class="text-sm text-gray-600 dark:text-gray-400">© {{ new Date().getFullYear() }} Zippy. All rights reserved.</p>
-          <div class="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
-            <a href="#" class="hover:text-primary transition">Privacy</a>
-            <a href="#" class="hover:text-primary transition">Terms</a>
-            <a href="#" class="hover:text-primary transition">Security</a>
+          <div class="flex items-center gap-6 text-sm">
+            <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors font-medium">Privacy Policy</a>
+            <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors font-medium">Terms of Service</a>
+            <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 dark:hover:text-pink-400 transition-colors font-medium">Security</a>
           </div>
         </div>
       </div>
