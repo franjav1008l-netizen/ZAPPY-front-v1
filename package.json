@@ -7,7 +7,7 @@
     "dev": "vite",
     "build:dev": "vite build --mode development",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
+    "preview": "vite preview --port 8080",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
