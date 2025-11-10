@@ -348,23 +348,163 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- How It Works Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            How Relay Works
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            From data ingestion to actionable insights in three simple steps
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="relative">
+            <div class="text-center">
+              <div class="mx-auto w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+                <span class="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Connect & Ingest</h3>
+              <p class="text-gray-600 dark:text-gray-400">Connect your communication channels. Relay automatically ingests every interaction—emails, Slack, WhatsApp, calls, and more.</p>
+            </div>
+            <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></div>
+          </div>
+          <div class="relative">
+            <div class="text-center">
+              <div class="mx-auto w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+                <span class="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">AI Analysis</h3>
+              <p class="text-gray-600 dark:text-gray-400">Google Gemini AI extracts requirements, sentiment, budgets, timelines, and KPIs from every conversation automatically.</p>
+            </div>
+            <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></div>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+              <span class="text-2xl font-bold text-white">3</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Get Insights</h3>
+            <p class="text-gray-600 dark:text-gray-400">Ask questions, get alerts, view trends, and make data-driven decisions—all without manual data entry.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Trusted by Sales Teams
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            See how teams are transforming their workflow with Relay
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-1 mb-4">
+              <svg v-for="i in 5" :key="i" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">"Relay cut our data entry time by 95%. Our team can finally focus on what matters—building relationships and closing deals."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-semibold">SJ</div>
+              <div>
+                <div class="font-semibold text-gray-900 dark:text-white">Sarah Johnson</div>
+                <div class="text-sm text-gray-600 dark:text-gray-400">Sales Director, TechCorp</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-1 mb-4">
+              <svg v-for="i in 5" :key="i" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">"The AI-powered alerts have saved us multiple times. We never miss urgent client needs or opportunities anymore."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-semibold">MC</div>
+              <div>
+                <div class="font-semibold text-gray-900 dark:text-white">Michael Chen</div>
+                <div class="text-sm text-gray-600 dark:text-gray-400">VP Sales, GrowthLabs</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-1 mb-4">
+              <svg v-for="i in 5" :key="i" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">"Having all customer context in one place changed everything. Our onboarding for new reps is now 10x faster."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-semibold">EP</div>
+              <div>
+                <div class="font-semibold text-gray-900 dark:text-white">Emily Parker</div>
+                <div class="text-sm text-gray-600 dark:text-gray-400">Head of Sales, InnovateCo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
     <section class="py-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto">
-        <div class="bg-gradient-to-br from-primary to-indigo-600 rounded-3xl p-12 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your CRM?
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Frequently Asked Questions
           </h2>
-          <p class="text-xl text-white/90 mb-8">
-            Join forward-thinking teams using AI to automate customer relationship management
-          </p>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <router-link to="/signin" class="px-8 py-4 text-base font-semibold text-primary bg-white hover:bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition">
-              Start Free Trial
-            </router-link>
-            <a href="mailto:contact@relay-crm.com" class="px-8 py-4 text-base font-semibold text-white border-2 border-white hover:bg-white/10 rounded-lg transition">
-              Contact Sales
-            </a>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">How does zero-click ingestion work?</h3>
+            <p class="text-gray-600 dark:text-gray-400">Relay connects to your communication channels (email, Slack, WhatsApp, etc.) and automatically captures every customer interaction. No manual data entry required—everything is ingested and analyzed in real-time.</p>
+          </div>
+          <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Is my data secure?</h3>
+            <p class="text-gray-600 dark:text-gray-400">Yes. We use enterprise-grade security with Row Level Security (RLS), encrypted storage, and comply with industry standards. Your data is always protected and never shared with third parties.</p>
+          </div>
+          <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">What channels does Relay support?</h3>
+            <p class="text-gray-600 dark:text-gray-400">Relay supports email, Slack, WhatsApp, phone calls, video recordings, and more. We're constantly adding new channels based on customer feedback.</p>
+          </div>
+          <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">How accurate is the AI analysis?</h3>
+            <p class="text-gray-600 dark:text-gray-400">Relay uses Google Gemini AI with advanced prompting techniques to ensure high accuracy. The AI continuously learns and improves, and you can always review and adjust any extracted information.</p>
+          </div>
+          <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Can I try Relay before committing?</h3>
+            <p class="text-gray-600 dark:text-gray-400">Absolutely! We offer a free trial so you can experience the power of zero-click CRM firsthand. No credit card required to get started.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+      <div class="max-w-4xl mx-auto">
+        <div class="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-indigo-600 rounded-3xl p-12 text-center">
+          <div class="absolute inset-0 bg-black/10 dark:bg-white/5"></div>
+          <div class="relative">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your CRM?
+            </h2>
+            <p class="text-xl text-white/90 mb-8">
+              Join forward-thinking teams using AI to automate customer relationship management
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <router-link to="/signin" class="px-8 py-4 text-base font-semibold text-primary bg-white hover:bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                Start Free Trial
+              </router-link>
+              <a href="mailto:contact@relay-crm.com" class="px-8 py-4 text-base font-semibold text-white border-2 border-white hover:bg-white/10 rounded-lg transition-all hover:scale-105">
+                Contact Sales
+              </a>
+            </div>
           </div>
         </div>
       </div>
