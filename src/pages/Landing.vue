@@ -656,6 +656,12 @@
       </div>
     </section>
 
+    <!-- AI Chat Demo Section -->
+    <AiChatDemo />
+
+    <!-- ROI Calculator Section -->
+    <ROICalculator />
+
     <!-- FAQ Section -->
     <section class="py-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto">
@@ -763,6 +769,8 @@
 
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
+import AiChatDemo from '@/components/landing/AiChatDemo.vue'
+import ROICalculator from '@/components/landing/ROICalculator.vue'
 
 // Simple IntersectionObserver to add fade-in animation on scroll
 let observer: IntersectionObserver | null = null

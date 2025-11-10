@@ -186,15 +186,13 @@
 import { computed, watch, type Component } from "vue";
 import { useRoute } from "vue-router";
 
-import {
-  GridIcon,
-  CalenderIcon,
-  UserCircleIcon,
-  DocsIcon,
-  ChevronDownIcon,
-  TableIcon,
-  ListIcon,
-} from "../../icons";
+import GridIcon from "@/icons/GridIcon.vue";
+import CalenderIcon from "@/icons/CalenderIcon.vue";
+import UserCircleIcon from "@/icons/UserCircleIcon.vue";
+import DocsIcon from "@/icons/DocsIcon.vue";
+import ChevronDownIcon from "@/icons/ChevronDownIcon.vue";
+import TableIcon from "@/icons/TableIcon.vue";
+import ListIcon from "@/icons/ListIcon.vue";
 import { useSidebar } from "@/composables/useSidebar";
  
 
