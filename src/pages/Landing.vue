@@ -12,17 +12,22 @@
         <div class="flex justify-between items-center h-20">
           <div class="flex items-center space-x-3">
             <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center">
-              <span class="text-xl font-bold text-white">Z</span>
+              <span class="text-xl font-bold text-white">N</span>
             </div>
-            <span class="text-2xl font-bold text-gray-900 dark:text-white">Zippy</span>
+            <span class="text-2xl font-bold text-gray-900 dark:text-white">Optiflow</span>
           </div>
           <div class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-500 transition-colors flex items-center gap-1">
+              All Pages
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
             <a href="#features" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-500 transition-colors">Features</a>
             <a href="#pricing" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-500 transition-colors">Pricing</a>
-            <a href="#demo" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-500 transition-colors">Demo</a>
-            <a href="#calculator" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-500 transition-colors">ROI Calculator</a>
+            <a href="#contact" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-500 transition-colors">Contact</a>
             <router-link to="/signin" class="btn-primary-clean">
-              Get Started
+              Get This Template
             </router-link>
           </div>
         </div>
@@ -32,12 +37,7 @@
     <!-- Hero Section -->
     <section class="relative pt-24 pb-32 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center relative z-10 max-w-4xl mx-auto">
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-500/15 rounded-full mb-8 border border-brand-100 dark:border-brand-500/30">
-            <div class="w-2 h-2 bg-brand-500 rounded-full"></div>
-            <span class="text-sm font-semibold text-brand-600 dark:text-brand-400">AI-Powered Zero-Click CRM</span>
-          </div>
-          
+        <div class="text-left relative z-10 max-w-4xl">
           <h1 class="fade-in-on-scroll mb-6 text-gray-900 dark:text-white">
             Drive growth with AI<br/>powered solutions
           </h1>
@@ -46,58 +46,53 @@
             Grow your business fast using our curated tools.
           </p>
           
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <router-link to="/signin" class="btn-primary-clean text-base">
+          <div class="flex flex-col sm:flex-row items-start gap-4 mb-16">
+            <router-link to="/signin" class="btn-hero-primary text-base">
               Get 14 Days Free Trial
             </router-link>
-            <a href="#demo" class="btn-secondary-clean text-base">
+            <a href="#demo" class="btn-hero-secondary text-base">
               Book A Demo
             </a>
           </div>
 
           <!-- Floating Product Cards -->
           <div class="relative mt-20">
-            <div class="flex justify-center items-center gap-6 flex-wrap">
+            <div class="flex items-start gap-6 flex-wrap">
               <!-- Card 1: Event Card -->
-              <div class="clean-card p-6 w-80 animate-float" style="animation-delay: 0s;">
-                <div class="flex items-center justify-between mb-4">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center">
-                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="text-xs text-gray-500">Upcoming event</div>
-                      <div class="text-sm font-semibold text-gray-900 dark:text-white">4 Members</div>
-                    </div>
+              <div class="hero-card p-6 w-80 bg-gray-900 dark:bg-gray-800 rounded-2xl shadow-2xl transform rotate-[-2deg] animate-float" style="animation-delay: 0s;">
+                <div class="mb-4">
+                  <div class="text-sm font-semibold text-white mb-1">Upcoming event.</div>
+                  <div class="text-xs text-gray-400 mb-3">16:00 - 16:30</div>
+                  <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-500 rounded-full">
+                    <span class="text-xs font-semibold text-white">4 Member</span>
                   </div>
-                  <div class="text-xs text-gray-500">16:00 - 16:30</div>
                 </div>
-                <button class="w-full py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
+                <button class="w-full py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-semibold flex items-center justify-center gap-2 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                  </svg>
                   Invite members
                 </button>
                 <div class="mt-4 space-y-2">
                   <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                    <span class="text-sm text-gray-700 dark:text-gray-300">Cameron Williamson</span>
+                    <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
+                    <span class="text-sm text-white/90">Cameron Williamson</span>
                   </div>
                   <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                    <span class="text-sm text-gray-700 dark:text-gray-300">Savannah Nguyen</span>
+                    <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
+                    <span class="text-sm text-white/90">Savannah Nguyen</span>
                   </div>
                   <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                    <span class="text-sm text-gray-700 dark:text-gray-300">Ronald Richards</span>
+                    <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
+                    <span class="text-sm text-white/90">Ronald Richards</span>
                   </div>
                 </div>
               </div>
 
               <!-- Card 2: Statistics Card -->
-              <div class="clean-card p-6 w-80 bg-gray-900 dark:bg-gray-800 animate-float" style="animation-delay: 1s;">
+              <div class="hero-card p-6 w-80 bg-gray-900 dark:bg-gray-800 rounded-2xl shadow-2xl transform rotate-[2deg] animate-float" style="animation-delay: 1s;">
                 <div class="text-white mb-4">
-                  <div class="text-sm mb-4">General statistics</div>
-                  <div class="text-sm opacity-60 mb-1">of Project tasks.</div>
+                  <div class="text-sm font-semibold mb-1">General statistics of project tasks.</div>
                 </div>
                 <div class="flex items-end gap-8 mb-6">
                   <div>
@@ -109,22 +104,10 @@
                     <div class="text-sm text-white/60">Open tasks</div>
                   </div>
                 </div>
-                <div class="space-y-2 mb-4">
-                  <div class="flex items-center gap-2">
-                    <div class="flex-1 h-2 bg-white/20 rounded-full">
-                      <div class="w-1/3 h-2 bg-white rounded-full"></div>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <div class="flex-1 h-2 bg-white/20 rounded-full">
-                      <div class="w-2/3 h-2 bg-brand-500 rounded-full"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex gap-2">
-                  <button class="flex-1 py-2 bg-white text-gray-900 rounded-lg text-xs font-semibold">1 day</button>
+                <div class="flex gap-2 mb-4">
+                  <button class="flex-1 py-2 bg-white/10 text-white rounded-lg text-xs font-semibold">1 day</button>
                   <button class="flex-1 py-2 bg-white/10 text-white rounded-lg text-xs font-semibold">Week</button>
-                  <button class="flex-1 py-2 bg-white/10 text-white rounded-lg text-xs font-semibold">Month</button>
+                  <button class="flex-1 py-2 bg-brand-500 text-white rounded-lg text-xs font-semibold">Month</button>
                   <button class="flex-1 py-2 bg-white/10 text-white rounded-lg text-xs font-semibold">Year</button>
                 </div>
               </div>
@@ -135,10 +118,10 @@
     </section>
 
     <!-- Trusted By Section -->
-    <section class="relative py-16 px-4 sm:px-6 lg:px-8 bg-gray-50/50 dark:bg-gray-900/50">
+    <section class="relative py-16 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-          <p class="text-sm font-semibold text-gray-500 dark:text-gray-500 uppercase tracking-wider">Trusted by thousands of business worldwide</p>
+        <div class="text-center">
+          <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Trusted by thousands of business worldwide</p>
         </div>
         <div class="flex flex-wrap items-center justify-center gap-12 opacity-60">
           <svg class="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
@@ -482,12 +465,12 @@
           <div>
             <div class="flex items-center space-x-3 mb-4">
               <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center">
-                <span class="text-xl font-bold text-white">Z</span>
+                <span class="text-xl font-bold text-white">N</span>
               </div>
-              <span class="text-2xl font-bold">Zippy</span>
+              <span class="text-2xl font-bold">Optiflow</span>
             </div>
             <p class="text-gray-400 text-sm">
-              AI-powered CRM that works for you
+              AI-powered solutions that work for you
             </p>
           </div>
           <div>
